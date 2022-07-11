@@ -5,17 +5,17 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/argoproj/applicationset.git
+      repoURL: https://github.com/polinchw/cluster-addons.git
       revision: HEAD
       directories:
-      - path: examples/git-generator-directory/cluster-addons/*
+      - path: addons/*
   template:
     metadata:
       name: '{{path.basename}}'
     spec:
       project: default
       source:
-        repoURL: https://github.com/argoproj/applicationset.git
+        repoURL: https://github.com/polinchw/cluster-addons.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
