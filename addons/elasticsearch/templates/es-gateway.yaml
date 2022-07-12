@@ -1,0 +1,27 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: elasticsearch-gateway
+  namespace: elasticsearch
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - elasticsearch.example.com
+  #   tls:
+  #     httpsRedirect: true # sends 301 redirect for http requests
+  # - port:
+  #     number: 443
+  #     name: https-443
+  #     protocol: HTTPS
+  #   hosts:
+  #   - kibana.example.com
+  #   tls:
+  #     mode: SIMPLE # enables HTTPS on this port
+  #     serverCertificate: /etc/certs/servercert.pem
+  #     privateKey: /etc/certs/privatekey.pem
