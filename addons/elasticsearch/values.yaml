@@ -23,7 +23,7 @@ global:
       name: elasticsearch
       ports:
         restAPI: 9200
-  kibanaEnabled: false
+  kibanaEnabled: true
 
 ## @section Common parameters
 
@@ -879,7 +879,7 @@ data:
   ## @param data.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -893,7 +893,7 @@ data:
   ## @param data.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -1168,7 +1168,7 @@ coordinating:
   ## @param coordinating.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -1182,7 +1182,7 @@ coordinating:
   ## @param coordinating.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -1424,7 +1424,7 @@ ingest:
   ## @param ingest.livenessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -1438,7 +1438,7 @@ ingest:
   ## @param ingest.readinessProbe.failureThreshold Minimum consecutive failures for the probe to be considered failed after having succeeded
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 90
     periodSeconds: 10
     timeoutSeconds: 5
@@ -2127,7 +2127,7 @@ metrics:
   ## @param metrics.livenessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (metrics pod)
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 60
     periodSeconds: 10
     timeoutSeconds: 5
@@ -2143,7 +2143,7 @@ metrics:
   ## @param metrics.readinessProbe.successThreshold Minimum consecutive successes for the probe to be considered successful after having failed (metrics pod)
   ##
   readinessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 5
     periodSeconds: 10
     timeoutSeconds: 1
