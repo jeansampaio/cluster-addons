@@ -211,7 +211,7 @@ volumePermissions:
 persistence:
   ## @param persistence.enabled Enable persistence
   ##
-  enabled: false
+  enabled: true
   ## @param persistence.storageClass Kibana data Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
@@ -229,7 +229,7 @@ persistence:
     - ReadWriteOnce
   ## @param persistence.size Size for the PV
   ##
-  size: 10Gi
+  size: 2Gi
   ## @param persistence.annotations Persistent Volume Claim annotations
   ##
   annotations: {}
@@ -689,10 +689,11 @@ elasticsearch:
   ##   - elasticsearch-1
   ##   - elasticsearch-2
   ##
-  hosts: []
+  hosts:
+    - elasticsearch.elasticsearch
   ## @param elasticsearch.port Elasticsearch port
   ##
-  port: ""
+  port: 9200
 
   security:
     auth:
