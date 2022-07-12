@@ -23,7 +23,7 @@ global:
       name: elasticsearch
       ports:
         restAPI: 9200
-  kibanaEnabled: true
+  kibanaEnabled: false
 
 ## @section Common parameters
 
