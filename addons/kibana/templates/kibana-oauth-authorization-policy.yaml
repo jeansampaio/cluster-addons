@@ -11,6 +11,6 @@ spec:
   - to:
     - operation:
         hosts:
-        - "kibanaa.example.com"
+        - "kibana.example.com"
         # Uncomment if authorization requried base on path match
         # paths: ["/api"]  
