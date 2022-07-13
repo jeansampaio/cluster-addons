@@ -41,7 +41,7 @@ daemonset:
 
       output.elasticsearch:
         host: '${NODE_NAME}'
-        hosts: '${ELASTICSEARCH_HOSTS:elasticsearch-master:9200}'
+        hosts: '${ELASTICSEARCH_HOSTS:elasticsearch.elasticsearch:9200}'
   # Only used when updateStrategy is set to "RollingUpdate"
   maxUnavailable: 1
   nodeSelector: {}
