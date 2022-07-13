@@ -103,7 +103,7 @@ extraEnvVars:
   - name: ELASTICSEARCH_HOST
     value: "elasticsearch.elasticsearch"
   - name: ELASTICSEARCH_PORT
-    value: 9200
+    value: "9200"
 ##
 ## @param extraEnvVarsSecret To add secrets to environment
 ##
