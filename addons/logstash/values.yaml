@@ -115,14 +115,14 @@ extraEnvVarsCM: ""
 ## ref: https://www.elastic.co/guide/en/logstash/current/input-plugins.html
 ##
 input: |-
-  # udp {
-  #   port => 1514
-  #   type => syslog
-  # }
-  # tcp {
-  #   port => 1514
-  #   type => syslog
-  # }
+  udp {
+    port => 1514
+    type => syslog
+  }
+  tcp {
+    port => 1514
+    type => syslog
+  }
   http { port => 8080 }
 ## @param filter Filter Plugins configuration
 ## ref: https://www.elastic.co/guide/en/logstash/current/filter-plugins.html
