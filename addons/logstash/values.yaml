@@ -105,7 +105,6 @@ extraEnvVars:
   - name: ELASTICSEARCH_PORT
     value: 9200
 ##
-extraEnvVars: []
 ## @param extraEnvVarsSecret To add secrets to environment
 ##
 extraEnvVarsSecret: ""
