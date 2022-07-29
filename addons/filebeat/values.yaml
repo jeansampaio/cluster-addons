@@ -11,6 +11,7 @@ daemonset:
   envFrom: []
   # - configMapRef:
   #     name: config-secret
+
   extraEnvs: []
   #  - name: MY_ENVIRONMENT_VAR
   #    value: the_value_goes_here
@@ -39,18 +40,24 @@ daemonset:
             - logs_path:
                 logs_path: "/var/log/containers/"
 
-      output.elasticsearch:
-        host: '${NODE_NAME}'
-        hosts: '${ELASTICSEARCH_HOSTS:elasticsearch.elasticsearch:9200}'
+      # output.elasticsearch:
+      #   host: '${NODE_NAME}'
+      #   hosts: '${ELASTICSEARCH_HOSTS:elasticsearch.elasticsearch:9200}'
+
+      output.logstash:
+        hosts: "logstash-dev.windstream.com:5044"
+        ssl.certificate_authorities: ["/usr/share/filebeat/certs/ca.crt"]
+        ssl.certificate: "/usr/share/filebeat/certs/tls.crt"
+        ssl.key: "/usr/share/filebeat/certs/tls.key"
   # Only used when updateStrategy is set to "RollingUpdate"
   maxUnavailable: 1
   nodeSelector: {}
   # A list of secrets and their paths to mount inside the pod
   # This is useful for mounting certificates for security other sensitive values
-  secretMounts: []
-  #  - name: filebeat-certificates
-  #    secretName: filebeat-certificates
-  #    path: /usr/share/filebeat/certs
+  secretMounts: 
+    - name: filebeat-certificates
+      secretName: filebeat-credential
+      path: /usr/share/filebeat/certs
   # Various pod security context settings. Bear in mind that many of these have an impact on Filebeat functioning properly.
   #
   # - User that the container will execute as. Typically necessary to run as root (0) in order to properly collect host container logs.
@@ -63,7 +70,7 @@ daemonset:
       cpu: "100m"
       memory: "100Mi"
     limits:
-      cpu: "1000m"
+      cpu: "2000m"
       memory: "200Mi"
   tolerations: []
 
