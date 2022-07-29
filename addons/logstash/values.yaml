@@ -344,16 +344,12 @@ lifecycleHooks: {}
 ## @param resources.requests The requested resources for the Logstash container
 ##
 resources:
-  ## Example:
-  ## limits:
-  ##    cpu: 100m
-  ##    memory: 128Mi
-  limits: {}
-  ## Examples:
-  ## requests:
-  ##    cpu: 100m
-  ##    memory: 128Mi
-  requests: {}
+  limits:
+     cpu: 200m
+     memory: 128Mi
+  requests:
+     cpu: 100m
+     memory: 128Mi
 ## Configure extra options for Logstash containers' liveness, readiness and startup probes
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
 ## @param startupProbe.enabled Enable startupProbe
