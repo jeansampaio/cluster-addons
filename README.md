@@ -8,6 +8,13 @@ It's deployed with an ArgoCD application-set that scans all the folders under th
 
 ## Deployment
 
+
+### Dev:
 ```
-kubectl apply -f application-set.yaml
+kubectl apply -k overlays/dev
+```
+
+### Prod:
+```
+kubectl apply -k base
 ```
