@@ -19,6 +19,9 @@ spec:
         repoURL: https://github.com/polinchw/cluster-addons.git
         targetRevision: smaller
         path: '{{path}}'
+        helm:
+          valueFiles:
+            - values-dev.yaml
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
