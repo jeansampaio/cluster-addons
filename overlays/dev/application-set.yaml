@@ -4,21 +4,10 @@ metadata:
   name: cluster-addons
   namespace: argocd
 spec:
-  generators:
-  - git:
-      repoURL: https://github.com/polinchw/cluster-addons.git
-      revision: smaller-dev
-      directories:
-      - path: addons/*
   template:
-    metadata:
-      name: '{{path.basename}}'
     spec:
       project: default
       source:
-        repoURL: https://github.com/polinchw/cluster-addons.git
-        targetRevision: smaller-dev
-        path: '{{path}}'
         helm:
           valueFiles:
             - values-dev.yaml
