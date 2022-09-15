@@ -9,11 +9,11 @@ It's deployed with an ArgoCD application-set that scans all the folders under th
 
 ## Kustomize 
 
-Place a values files that corresponds to the environment you want to deploy in 
++ Place a values files that corresponds to the environment you want to deploy in 
 such as values-dev.yaml in the directory that contains the helm chart.
 
-Create a Kustomize overlay that matches the name of the enviroment such as overlays/dev.
-Place a kustomization.yaml and application-set.yaml patch in the overlay/<env> directory.
++ Create a Kustomize overlay that matches the name of the enviroment such as overlays/dev.
+Place a kustomization.yaml and application-set.yaml patch in the overlay/dev directory.
 
 ### Deployment with Kustomize
 
