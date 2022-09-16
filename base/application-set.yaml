@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/polinchw/cluster-addons.git
-      revision: smaller-dev
+      revision: HEAD
       directories:
       - path: addons/*
   template:
@@ -17,7 +17,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/polinchw/cluster-addons.git
-        targetRevision: smaller-dev
+        targetRevision: HEAD
         path: '{{path}}'
         helm:
           valueFiles:
@@ -26,6 +26,7 @@ spec:
         server: https://kubernetes.default.svc
         namespace: '{{path.basename}}'
       syncPolicy:
-        automated: {}
+        automated: 
+          selfHeal: true
         syncOptions:
           - CreateNamespace=true
