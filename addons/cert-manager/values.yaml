@@ -43,7 +43,7 @@ global:
 
 installCRDs: true
 
-replicaCount: 3
+replicaCount: 1
 
 strategy: {}
   # type: RollingUpdate
