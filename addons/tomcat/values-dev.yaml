@@ -1,0 +1,8 @@
+resources:
+  ## Example:
+  limits:
+     cpu: 50m
+     memory: 300Mi
+  requests:
+    cpu: 20m
+    memory: 512Mi
