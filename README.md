@@ -26,3 +26,23 @@ kubectl apply -k overlays/dev
 ```
 kubectl apply -k base
 ```
+
+## Rollback
+
+It is recommended to make changes to the HEAD if you want to revert a change.  If you do need 
+to roll back to a previous commit you would change the ApplicationSet section.
+
+```
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: cluster-addons
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/polinchw/cluster-addons.git
+      revision: <previous-hash-or-tag-goes-here>
+      directories:
+      - path: addons/*
+```
