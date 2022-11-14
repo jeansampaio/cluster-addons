@@ -17,7 +17,7 @@ spec:
       project: default
       source:
         repoURL: https://github.com/polinchw/cluster-addons.git
-        targetRevision: bdd0abb561d4b5bad8a31fe3515715c33a61f396
+        targetRevision: HEAD
         path: '{{path}}'
         helm:
           valueFiles:
