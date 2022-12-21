@@ -21,7 +21,7 @@ ingress:
 
   ## @param ingress.hostname When the ingress is enabled, a host pointing to this will be created
   ##
-  hostname: phpmyadmin.local
+  hostname: demo-phpmyadmin
   ## @param ingress.pathType Ingress path type
   ##
   pathType: ImplementationSpecific
