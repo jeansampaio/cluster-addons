@@ -1,0 +1,13 @@
+auth:
+  ## @param auth.rootPassword Password for the `root` user. Ignored if existing secret is provided
+  ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mysql#setting-the-root-password-on-first-run
+  ##
+  rootPassword: "password"
+  ## @param auth.createDatabase Wheter to create the .Values.auth.database or not
+  ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mysql#creating-a-database-on-first-run
+  ##
+  createDatabase: true
+  ## @param auth.database Name for a custom database to create
+  ## ref: https://github.com/bitnami/containers/tree/main/bitnami/mysql#creating-a-database-on-first-run
+  ##
+  database: "demo"
