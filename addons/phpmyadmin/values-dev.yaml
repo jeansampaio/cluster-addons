@@ -45,8 +45,8 @@ ingress:
   ## ref: https://cert-manager.io/docs/usage/ingress/#supported-annotations
   ##
   ## e.g:
-  annotations:
-    kubernetes.io/ingress.class: traefik
+  # annotations:
+  #   kubernetes.io/ingress.class: traefik
   ##   cert-manager.io/cluster-issuer: cluster-issuer-name
   ##
   annotations: {}
