@@ -1,4 +1,0 @@
-prometheus:
-  enabled: false
-
-replicaCount: 1
