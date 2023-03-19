@@ -117,7 +117,7 @@ watchIngressWithoutClass: false
 ingressClassResource:
   name: nginx
   enabled: true
-  default: false
+  default: true
   controllerClass: "k8s.io/ingress-nginx"
   parameters: {}
 ## Allows customization of the external service
