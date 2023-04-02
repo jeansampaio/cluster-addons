@@ -8,3 +8,8 @@ persistence:
   ##
   #storageClass: local-path
   size: 1Gi
+
+service:
+  ## @param service.type Kubernetes Service type
+  ##
+  type: LoadBalancer
