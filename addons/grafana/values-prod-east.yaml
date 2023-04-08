@@ -13,3 +13,21 @@ service:
   ## @param service.type Kubernetes Service type
   ##
   type: LoadBalancer
+
+ingress:
+  ## @param ingress.enabled Set to true to enable ingress record generation
+  ##
+  enabled: true
+  ## DEPRECATED: Use ingress.annotations instead of ingress.certManager
+  ## certManager: false
+  ##
+
+  ## @param ingress.pathType Ingress Path type
+  ##
+  pathType: ImplementationSpecific
+  ## @param ingress.apiVersion Override API Version (automatically detected if not set)
+  ##
+  apiVersion: ""
+  ## @param ingress.hostname When the ingress is enabled, a host pointing to this will be created
+  ##
+  hostname: grafana.local
