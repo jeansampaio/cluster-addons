@@ -1,0 +1,17 @@
+hub:
+  ## Enabling Hub will:
+  # * enable Traefik Hub integration on Traefik
+  # * add `traefikhub-tunl` endpoint
+  # * enable Prometheus metrics with addRoutersLabels
+  # * enable allowExternalNameServices on KubernetesIngress provider
+  # * enable allowCrossNamespace on KubernetesCRD provider
+  # * add an internal (ClusterIP) Service, dedicated for Traefik Hub
+  enabled: false
+  ## Default port can be changed
+  # tunnelPort: 9901
+  ## TLS is optional. Insecure is mutually exclusive with any other options
+  # tls:
+  #   insecure: false
+  #   ca: "/path/to/ca.pem"
+  #   cert: "/path/to/cert.pem"
+  #   key: "/path/to/key.pem"
