@@ -1,0 +1,15 @@
+persistence:
+  enabled: true
+  ## If defined, storageClassName: <storageClass>
+  ## If set to "-", storageClassName: "", which disables dynamic provisioning
+  ## If undefined (the default) or set to null, no storageClassName spec is
+  ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+  ##   GKE, AWS & OpenStack)
+  ##
+  #storageClass: local-path
+  size: 1Gi
+
+service:
+  ## @param service.type Kubernetes Service type
+  ##
+  type: LoadBalancer
