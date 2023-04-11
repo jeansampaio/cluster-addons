@@ -12,4 +12,4 @@ persistence:
 service:
   ## @param service.type Kubernetes Service type
   ##
-  type: LoadBalancer
+  type: ClusterIP
