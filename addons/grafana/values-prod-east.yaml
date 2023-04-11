@@ -7,7 +7,7 @@ persistence:
   ##   GKE, AWS & OpenStack)
   ##
   #storageClass: local-path
-  size: 1Gi
+  size: 10Gi
 
 service:
   ## @param service.type Kubernetes Service type
