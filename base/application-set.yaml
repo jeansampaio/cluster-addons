@@ -6,7 +6,7 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: https://github.com/polinchw/cluster-addons.git
+      repoURL: git@github.com:jeansampaio/cluster-addons.git
       revision: HEAD
       directories:
       - path: addons/*
@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/polinchw/cluster-addons.git
+        repoURL: git@github.com:jeansampaio/cluster-addons.git
         targetRevision: HEAD
         path: '{{path}}'
         helm:
